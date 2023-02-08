@@ -1,0 +1,9 @@
+SELECT
+    FIRST_NAME               AS NOMBRES,
+    SALARY                   AS BRUTO,
+    (SALARY*20/100)          AS IMPUESTOS,
+    (SALARY-(SALARY*20/100)) AS NETO
+FROM
+    EMPLOYEES
+ORDER BY
+    NOMBRES DESC;
