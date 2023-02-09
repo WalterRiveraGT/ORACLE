@@ -27,3 +27,15 @@ FROM
     EMPLOYEES
 WHERE
     DEPARTMENT_ID<>50;
+
+/*condiciones con literales (strings)*/
+/*seleccionar aquellos usuarios que
+    tengan nombre John*/
+
+
+SELECT
+    *
+FROM
+    EMPLOYEES
+WHERE
+    FIRST_NAME='John';
