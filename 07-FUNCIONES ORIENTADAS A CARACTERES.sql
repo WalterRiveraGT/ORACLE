@@ -20,3 +20,18 @@ SELECT
     INITCAP('Esto es una prueba')
 FROM
     DUAL;
+
+/*funciones de concatenación de caracteres*/
+--concatenación
+SELECT
+    FIRST_NAME ||' ' || LAST_NAME
+FROM
+    EMPLOYEES;
+
+/*OTRA OPCIÓN*/
+SELECT
+    CONCAT(FIRST_NAME,
+    CONCAT(' ',
+    LAST_NAME)) AS NOMBRE_COMPLETO
+FROM
+    EMPLOYEES;
