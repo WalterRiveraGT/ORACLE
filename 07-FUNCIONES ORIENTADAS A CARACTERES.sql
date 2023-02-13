@@ -75,3 +75,57 @@ SELECT
     1) AS ULTIMO_CARACTER
 FROM
     EMPLOYEES;
+
+/*FUNCIÓN INSTR
+Devuelve la posición que ocupa una cadena, dentro
+de otra cadena*/
+
+/*SELECT FIRST_NAME, INSTR(P_ /*STRING*/
+/*SUBSTRING*//*POSITION*//*OCCURRENCE)*/
+/*Nombres con una letra a y su posición, 
+Si devuelve 0, quiere decir que no existe tal caracter 
+en la cadena*/
+
+/*Función REGEXP_COUNT: permite contar
+la concurrencia (número de veces) que aparece
+un caracter o caracteres determinaodos en una cadena dada*/
+SELECT
+    FIRST_NAME,
+    INSTR(FIRST_NAME,
+    'a') AS UBICACION_CARACTER_A,
+    REGEXP_COUNT(FIRST_NAME,
+    'a',
+    1)   AS CONCURRENCIA_DEL_CARACTER_A
+FROM
+    EMPLOYEES;
+
+/*sacar los nombres que solo tengan una y
+pasamos todos los caracteres a minúscula*/
+
+SELECT
+    FIRST_NAME,
+    INSTR(LOWER(FIRST_NAME),
+    'y',
+    1) AS UBICACION_CARACTER_Y
+FROM
+    EMPLOYEES
+WHERE
+    INSTR(LOWER(FIRST_NAME),
+    'y',
+    1)>=1;
+
+/*sacar los nombres que solo tengan una a
+    desde la posición número 4
+pasamos todos los caracteres a minúscula*/
+
+SELECT
+    FIRST_NAME,
+    INSTR(LOWER(FIRST_NAME),
+    'a',
+    4) AS UBICACION_CARACTER_Y
+FROM
+    EMPLOYEES
+WHERE
+    INSTR(LOWER(FIRST_NAME),
+    'a',
+    4)>=1;
