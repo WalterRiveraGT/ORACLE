@@ -15,3 +15,8 @@ FROM
     EMPLOYEES;
 
 --INITCAP
+/*primera letra de cada palabra en mayúscula*/
+SELECT
+    INITCAP('Esto es una prueba')
+FROM
+    DUAL;
